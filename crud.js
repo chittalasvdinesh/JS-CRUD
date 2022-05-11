@@ -17,7 +17,7 @@ const defaultBorder='1px solid black'
 function validateUserName(){
   tdNode1.textContent = ""
   let userNameVal = userName.value;
-  // userNameVal = userNameVal.replace(/\s/g, "");
+  userNameVal = userNameVal.replace(/\s/g, "");
   let regExp= new RegExp("^[A-Za-z]*$");
   if (userNameVal === ''){
      
@@ -35,7 +35,7 @@ function validateUserName(){
 function validateDesignation(){
   tdNode2.textContent = ""
   let designationVal = designation.value;
-  // designationVal = designationVal.replace(/\s/g, "");
+   designationVal = designationVal.replace(/\s/g, "");
   let regExp= new RegExp("^[A-Za-z]*$");
   if (designationVal === ''){
       
