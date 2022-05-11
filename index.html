@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3>Add new user</h3>
+                <form  class="add-user-group mb-4" onsubmit="validateForm()" novalidate>
+                    <div class="form-group">
+                        <label for="userName">Employee name</label>
+                        <input type="text" class="form-control" id="userName" onblur=validateUserName()>
+                        <div id = "error1" class="error"></div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="designation">Designation</label>
+                        <input type="text" class="form-control" id="designation" onblur=validateDesignation()>
+                        <div id = "error2" class="error"></div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="salary">Salary</label>
+                        <input type="text" class="form-control" id="salary" onblur=validateSalary()>
+                        <div id = "error3" class="error"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Add user</button>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="users-list row ">
+          
+            
+        </div> -->
+        <div class="table-responsive">
+        <table class="table table-success table-striped">
+            
+            <tr>
+                <th>Id</th>
+                <th>Employee Name</th>
+                <th>Designation</th>
+                <th>Salary</th>
+                <th>Action</th>
+            </th>
+        
+        <tbody class="users-list">
+
+        </tbody>
+          </table>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="./crud.js"></script>
+</body>
+</html>
