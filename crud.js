@@ -154,7 +154,7 @@ console.log(usersList.parentElement.children.length)
     userName.value=employeeName;
     designation.value=designationContent;
    salary.value=salaryContent
-   
+   submitBtn.textContent="Update"
     submitBtn.addEventListener('click',(e)=>{
       e.preventDefault()
       if(validateForm()==true){
@@ -180,6 +180,7 @@ console.log(usersList.parentElement.children.length)
       userName.style.border=defaultBorder;
       designation.style.border=defaultBorder;
       salary.style.border=defaultBorder;
+      submitBtn.textContent="Add Employee";
     }
     })
     
