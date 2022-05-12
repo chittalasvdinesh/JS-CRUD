@@ -35,7 +35,7 @@ function validateUserName(){
 function validateDesignation(){
   tdNode2.textContent = ""
   let designationVal = designation.value;
-   designationVal = designationVal.replace(/\s/g, "");
+  designationVal = designationVal.replace(/\s/g, "");
   let regExp= new RegExp("^[A-Za-z]*$");
   if (designationVal === ''){
       
@@ -154,9 +154,11 @@ console.log(usersList.parentElement.children.length)
     userName.value=employeeName;
     designation.value=designationContent;
    salary.value=salaryContent
-
+   
     submitBtn.addEventListener('click',(e)=>{
       e.preventDefault()
+      if(validateForm()==true){
+       
       fetch(`${url}/${idVal}`,{
         method:'PATCH',
         headers:{
@@ -171,10 +173,14 @@ console.log(usersList.parentElement.children.length)
       })
       .then(res=>res.json())
       .then(()=>location.reload())
-
+   
       userName.value='';
-    designation.value='';
-    salary.value=''
+      designation.value='';
+      salary.value='';
+      userName.style.border=defaultBorder;
+      designation.style.border=defaultBorder;
+      salary.style.border=defaultBorder;
+    }
     })
     
   }
