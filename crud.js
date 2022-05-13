@@ -86,8 +86,7 @@ const submitBtn=document.querySelector('.btn');
 
 
 
-const url ='https://48f9-2409-4070-4289-8ee0-f475-2b44-6e02-7476.in.ngrok.io/api/users';
-
+const url='https://a0fb-2409-4070-2107-c2d5-f17a-4bbd-3607-acac.in.ngrok.io/api/users';
 let output=''
 
 const renderUsers=(users)=>{
